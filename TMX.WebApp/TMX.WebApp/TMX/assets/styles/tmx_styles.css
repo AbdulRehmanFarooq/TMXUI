@@ -39,16 +39,6 @@ a{
     text-decoration: none!important;
 }
 
-.k-grid-add{
-     background-color: #4caf50 !important;
-     border:none !important;
-}
-
-
-.k-header.k-grid-toolbar.ng-scope {
-    background-color: transparent!important;
-    border-bottom-color: lightgray;!important
-}
 
 .topbar
  {
@@ -84,7 +74,6 @@ a{
  background-color:#4caf50 !important;
 }
 
-
  #tmximg
  {
    width:156px;
@@ -103,7 +92,7 @@ a{
 
  .white
  {
-   color: white;
+   color: white !important;
  }
 
  .navfont
@@ -139,9 +128,12 @@ a{
    background-color: white;
  }
 
+ .green{
+ color: #4caf50;
+ }
  .bggreen
  {
-   background-color: #4caf50;
+   background-color: #4caf50 !important;
  }
 
   .bggray

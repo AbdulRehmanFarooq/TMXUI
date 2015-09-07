@@ -62,17 +62,13 @@
            controller: 'ManageCompanyContentCtrl'
        })
        .when('/LocationManagement', {
-           templateUrl: 'MasterData/partials/contents/manageProduct-content.html',
-           controller: 'ManageProductContentCtrl'
+           templateUrl: 'MasterData/partials/contents/manageLocation-content.html',
+           controller: 'ManageLocationContentCtrl'
        })
        .when('/ProductManagement', {
            templateUrl: 'MasterData/partials/contents/manageProduct-content.html',
            controller: 'ManageProductContentCtrl'
        })
-      .when('/PricelistManagement', {
-          templateUrl: 'MasterData/partials/contents/managePricelist-content.html',
-          controller: 'ManagePricelistContentCtrl'
-      })
       
   }]).filter('Translate', function () {
       return translate;

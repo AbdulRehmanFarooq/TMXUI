@@ -9,7 +9,7 @@
             <div layout-fill>
                 <ol class="breadcrumb fontDroid">
                     <li><a href="dashboard.html">Home</a></li>
-                    <li>Distributor Management</li>
+                    <li>Location Management</li>
 
                 </ol>
             </div>
@@ -37,7 +37,7 @@
                                            filter:{
                                              logic:"or",
                                              filters:[
-                                           {field: "DistributorCode",operator:"contains",value:q},
+                                           {field: "LocationCode",operator:"contains",value:q},
 
 
 
@@ -55,6 +55,8 @@
                         </button>
                     </div>
                     <div>
+                        <md-button class="md-raised bggreen white">View tree Map</md-button>
+                        <md-button class="md-raised bggreen white">View Location</md-button>
                         <md-button class="md-fab md-primary md-mini" aria-label="Profile">
                             <md-icon md-svg-src="" class="fa fa-plus fa-lg" ng-click="open()"></md-icon>
                         </md-button>
@@ -63,12 +65,14 @@
             </div>
             <div>
                 <div layout="column" class="bgwhite" ng-repeat="row in mainGridOptions.dataSource.data" hide show-sm>
-                    <div layout="row"> <div layout-padding flex> Distributor Code</div><div layout-padding>{{row.DistributorCode}}</div></div>
-                    <div layout="row"> <div layout-padding flex> Distributor Name</div><div layout-padding><a ng-click="resizeleft();  toggleLeft(); toggleRight();"> Metro Store</a></div></div>
-                    <div layout="row"> <div layout-padding flex> Distributor Type</div><div layout-padding> {{row.DistributorType}}</div></div>
-                    <div layout="row"> <div layout-padding flex> Distributor Location</div><div layout-padding> {{row.DistributorLocation}}</div></div>
+                    <div layout="row"> <div layout-padding flex> Location Code</div><div layout-padding>{{row.LocationCode}}</div></div>
+                    <div layout="row"> <div layout-padding flex> Location Name</div><div layout-padding><a ng-click="resizeleft();  toggleLeft(); toggleRight();"> Metro Store</a></div></div>
+                    <div layout="row"> <div layout-padding flex> Location Type</div><div layout-padding> {{row.LocationType}}</div></div>
+                    <div layout="row"> <div layout-padding flex> Parent Location</div><div layout-padding> {{row.ParentLocation}}</div></div>
                     <div layout="row"> <div layout-padding flex> Status</div><div layout-padding> {{row.Status}}</div></div>
-                    <div layout="row"> <div layout-padding flex> Parent</div><div layout-padding> {{row.Parent}}</div></div>
+                    <div layout="row"> <div layout-padding flex> Longitude</div><div layout-padding> {{row.Longitude}}</div></div>
+                    <div layout="row"> <div layout-padding flex> Latitude</div><div layout-padding> {{row.Latitude}}</div></div>
+                    <div layout="row"> <div layout-padding flex> Effective Date</div><div layout-padding> {{row.EffectiveDate}}</div></div>
                     <div layout="row"> <div layout-padding flex>Actions</div><div layout-padding><a href=""><i class="fa fa-pencil fa-lg tablehyperlink" ng-click="open()"></i></a><a href=""><i class="fa fa-trash-o fa-lg tablehyperlink"></i></a> </div></div>
                     <md-divider ng-if="!$last"></md-divider>
                 </div>
