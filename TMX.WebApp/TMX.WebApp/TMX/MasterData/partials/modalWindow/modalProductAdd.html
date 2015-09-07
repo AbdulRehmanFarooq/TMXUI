@@ -1,0 +1,168 @@
+﻿<div class="modal-header bggreen">
+    <button type="button" class="close" aria-label="Close" ng-click="cancel()"><span aria-hidden="true">&times;</span></button>
+    <h4 class="white fontDroid">Add Product</h4>
+</div>
+<div class="modal-body">
+    <md-tabs md-dynamic-height md-border-bottom md-stretch-tabs md-selected="0">
+        <md-tab label="Product">
+            <md-content class="md-padding">
+
+                <form name="projectForm">
+                    <div layout layout-md="column">
+                        <md-input-container style="width:48%; padding-right:20px;">
+                            <label style="font-size:13px; font-style:normal; font-weight:normal;">Product Code</label>
+                            <input required name="CreditStatus" ng-model="project.CreditStatus">
+                        </md-input-container>
+                        <md-input-container style="width:50%">
+                            <label style="font-size:13px; font-style:normal; font-weight:normal;">Primary Unit of Measure</label>
+                            <input required name="CreditName" ng-model="project.Name">
+                        </md-input-container>
+                    </div>
+                    <div layout layout-md="column">
+                        <md-input-container style="width:48%; padding-right:20px;">
+                            <label style="font-size:13px; font-style:normal; font-weight:normal;">Product Name</label>
+                            <input required name="OutstandingCashMemo" ng-model="project.OutstandingCashMemo">
+                        </md-input-container>
+                        <md-input-container style="width:50%">
+                            <label style="font-size:13px; font-style:normal; font-weight:normal;">Secondary Unit Of Measure</label>
+                            <input required name="OperationUnit" ng-model="project.OperationUnit">
+                        </md-input-container>
+                    </div>
+                    <div layout layout-md="column">
+                        <md-input-container style="width:48%; padding-right:20px;">
+                            <label style="font-size:13px; font-style:normal; font-weight:normal;">Product Type</label>
+                            <input list="ProductType">
+                            <datalist id="ProductType">
+                                <option value="Some Value">
+                                <option value="Some Value">
+                            </datalist>
+                        </md-input-container>
+                        <md-input-container style="width:50%;">
+                            <label style="font-size:13px; font-style:normal; font-weight:normal;">Weight Unit Of Measure</label>
+                            <input required name="paymentType" ng-model="project.paymentType">
+                        </md-input-container>
+                    </div>
+                    <div layout layout-md="column">
+                        <md-input-container style="width:48%; padding-right:20px;">
+                            <label style="font-size:13px; font-style:normal; font-weight:normal;">Product Category</label>
+                            <input list="ProductCategory">
+                            <datalist id="ProductCategory">
+                                <option value="Some Value"> 
+                            </datalist>
+                        </md-input-container>
+                        <md-input-container style="width:50%; ">
+                            <label style="font-size:13px; font-style:normal; font-weight:normal;">Weight</label>
+                            <input required name="taxRate" ng-model="project.taxRate">
+                        </md-input-container>
+
+                    </div>
+                    <div layout layout-md="column">
+                        <md-input-container style="width:48%; padding-right:20px;">
+                            <label style="font-size:13px; font-style:normal; font-weight:normal;">Product Class</label>
+                            <input list="ProductClass">
+                            <datalist id="ProductClass">
+                                <option value="Some Value">
+                            </datalist>
+                        </md-input-container>
+                        <md-input-container style="width:48%; padding-right:20px;">
+                            <label style="font-size:13px; font-style:normal; font-weight:normal;">Line of Business:</label>
+                            <input required name="location" ng-model="project.location">
+                        </md-input-container>
+
+                    </div>
+
+                    <div layout layout-md="column">
+                        <md-input-container style="width:48%; padding-right:20px;">
+                            <label style="font-size:13px; font-style:normal; font-weight:normal;">Principal</label>
+                            <input required name="location" ng-model="project.location">
+                        </md-input-container>
+                        <md-input-container style="width:48%; padding-right:20px;">
+                            <label style="font-size:13px; font-style:normal; font-weight:normal;">Supplier</label>
+                            <input list="Supplier">
+                            <datalist id="Supplier">
+                                <option value="Davidoff Café">
+                                <option value="Barilla">
+                                <option value="VENICE">
+                                <option value="Test">
+                            </datalist>
+                        </md-input-container>
+
+                    </div>
+
+                    <div layout layout-md="column">
+                        <md-input-container style="width:48%; padding-right:20px;">
+                            <label style="font-size:13px; font-style:normal; font-weight:normal;">Packaging</label>
+                            <input required name="location" ng-model="project.location">
+                        </md-input-container>
+
+                    </div>
+                </form>
+
+                
+
+
+
+
+            </md-content>
+        </md-tab>
+        <md-tab label="Details">
+            <md-content class="md-padding">
+                <form name="projectForm1">
+                    <md-input-container>
+
+                        <div layout layout-md="column">
+                            <md-input-container style="width:20%; ">
+                                <label style="font-size:13px; font-style:normal; font-weight:normal; position: fixed;top: 15px;">Available</label>
+                               
+                            </md-input-container>
+                           
+                            <md-radio-group >
+                                <div layout layout-md="column" >
+                                    <md-radio-button id="1" value="Y" class="md-primary rdmanager" style="color:grey">Yes</md-radio-button>
+                                    <md-radio-button value="N" style="color:grey"> No </md-radio-button>
+
+                                </div>
+                                </md-radio-group>
+                        </div>
+
+                        <md-input-container>
+
+                            <div layout layout-md="column">
+                                <md-input-container style="width:20%; ">
+                                    <label style="font-size:13px; font-style:normal; font-weight:normal; position: fixed;top: 65px; margin-left:-10px;">Returnable Item</label>
+
+                                </md-input-container>
+
+                                <md-radio-group>
+                                    <div layout layout-md="column">
+                                        <md-radio-button id="1" value="Y" class="md-primary rdmanager" style="color:grey">Yes</md-radio-button>
+                                        <md-radio-button value="N" style="color:grey"> No </md-radio-button>
+
+                                    </div>
+                                </md-radio-group>
+                            </div>
+
+
+                            <md-input-container>
+                                <label style="font-size:13px; font-style:normal; font-weight:normal;">Product Tax Rate</label>
+                                <input required name="detailsOutstandingCashMemo" ng-model="project.detailsOutstandingCashMemo">
+                            </md-input-container>
+                            <md-input-container>
+                                <label style="font-size:13px; font-style:normal; font-weight:normal;">Product Tax Code</label>
+                                <input required name="detailsOperationUnit" ng-model="project.detailsOperationUnit">
+                            </md-input-container>
+</form>
+            </md-content>
+        </md-tab>
+
+    </md-tabs>
+
+
+
+</div>
+<div class="modal-footer">
+
+    <md-button class="md-primary" ng-click="cancel()">Close</md-button>
+    <md-button class="md-primary" ng-click="ok()">Save</button>
+
+</div>

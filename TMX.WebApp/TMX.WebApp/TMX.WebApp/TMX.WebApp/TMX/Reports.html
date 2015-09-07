@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <link  rel="stylesheet" href="assets/styles/angular-material.css" >
+  <link rel="stylesheet" href="assets/styles/kendo.material.min.css" />
+  <link  rel="stylesheet" href="assets/styles/tmx_styles.css" >
+  <link rel="stylesheet" href="assets/styles/font-awesome/css/font-awesome.min.css">
+
+  <script src="https://kendo.cdn.telerik.com/2015.2.624/js/jquery.min.js"></script>
+	<script src="https://kendo.cdn.telerik.com/2015.2.624/js/angular.min.js"></script>
+	<script src="https://kendo.cdn.telerik.com/2015.2.624/js/kendo.all.min.js"></script>
+
+  <script src="scripts/angular-animate.js"></script>
+  <script src="scripts/angular-aria.js"></script>
+  <script src="scripts/angular-material.js"></script>
+
+  <script src="Reports/controllers/ReportsCtrl.js"></script>
+  <script src="Reports/services/sharedProperties.js"></script>
+  <script src="Reports/controllers/DashbaordContentCtrl.js"></script>
+  <script src="LeftNavigationBar/controllers/LeftCtrl.js"></script>
+  <script src="Reports/controllers/TopCtrl.js"></script>
+  <script src="Reports/directives/topBar/topBarComp.js"></script>
+  <script src="Reports/directives/topBar/topBarMob.js"></script>
+  
+ </head>
+ <body>
+   <div ng-app="Reports" ng-controller="ReportsCtrl"  style="height:100%; width:100%;">
+    <div    layout-fill  layout="column" class="bggray" style="position:relative;"  >
+
+      <div style="background-color:red;" ng-class="Margin" layout="row" flex >
+        <section layout="row"  flex>
+
+          <!-- left sidenav in mobile devices-->
+          <div ng-app="LeftNavigationBar" ng-controller="LeftCtrl"  ng-include="'LeftNavigationBar/partials/leftNav-Mob.html'">
+          </div>
+
+          <!--Main Panel -->
+          <md-content flex layout="row" class="bggray">
+
+              <!--left panel in computer-->
+              <div ng-app="LeftNavigationBar" ng-controller="LeftCtrl" ng-include="'LeftNavigationBar/partials/leftNav-Comp.html'"  layout="column"  class="leftpanel bgwhite" layout-fill hide-sm  hide-md >
+              </div>
+              <!--left panel in computer-->
+
+              <!-- Content box-->
+              <div   ng-include="'Reports/partials/contents/dashboard-content.html'" ng-controller="DashboardContentCtrl">
+              </div>
+              <!-- Content box--> 
+
+          </md-content>
+          <!-- Main Panel-->
+       
+        </section>
+      </div>
+
+      <!-- topbar in tabs, and computer-->      
+      <div top-bar-comp></div>
+
+      <!-- topbar in mobile devices-->
+      <div top-bar-mob></div>
+    
+
+    </div>
+   </div>
+
+ </body>
+
+</html>

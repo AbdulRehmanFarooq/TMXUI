@@ -1,0 +1,206 @@
+
+          <div layout="column"    class=" bgwhite" layout-fill  >
+            <div layout-margin  layout-padding layout-fill >
+                 <h4>Navigation</h4>
+                 <md-card>
+
+                 <md-card-content>
+
+                 <md-input-container class="md-primary col-sm-6 md-default-theme md-input-has-value">
+                   <label style = "text-align: left; float: left;"></label><a href="ManageDistributor.html">Agent
+                   <input type="text" name="Agent" ng-model="project.Agent" ng-readonly="true" tabindex="0" />
+                 </md-input-container>
+                 </a>
+                 <md-input-container class="col-sm-6 md-default-theme md-input-has-value">
+                 <label style = "text-align: left; float: left;"></label><a href="ManageDistributor.html">Schemes
+                   <input type="text" name="Schemes" ng-model="project.Schemes" ng-readonly="true"  tabindex="0" required/>
+                 </md-input-container>
+                 </a>
+                 <md-input-container class="md-primary col-sm-6 md-default-theme md-input-has-value">
+                   <label style = "text-align: left; float: left;"></label><a href="ManageDistributor.html">Products
+                   <input type="text" name="Agent" ng-model="project.Agent" ng-readonly="true" tabindex="0" />
+                 </md-input-container></a>
+                 <br>
+                 <md-input-container class="md-primary col-sm-6 md-default-theme md-input-has-value">
+                   <label style = "text-align: left; float: left;"></label><a href="ManageDistributor.html">Distributors
+                   <input type="text" name="Agent" ng-model="project.Agent" ng-readonly="true" tabindex="0" />
+                 </md-input-container></a>
+                 <md-input-container class="md-primary col-sm-6 md-default-theme md-input-has-value">
+                   <label style = "text-align: left; float: left;"></label><a href="ManageDistributor.html">PJP
+                   <input type="text" name="Agent" ng-model="project.Agent" ng-readonly="true" tabindex="0" />
+                 </md-input-container></a>
+                 <br>
+                 <md-input-container class="md-primary col-sm-6 md-default-theme md-input-has-value">
+                   <label style = "text-align: left; float: left;"></label><a href="ManageDistributor.html">Target
+                   <input type="text" name="Agent" ng-model="project.Agent" ng-readonly="true" tabindex="0" />
+                 </md-input-container></a>
+                 </md-card-content>
+
+                </md-card>
+            </div>
+            <div layout-margin  layout-padding layout-fill >
+                  <h4>Sales Vs Target</h4>
+                  <md-card>
+                    <md-card-content>
+                      <div id="example">
+                      <div class="demo-section k-content">
+                       <div id="chart1"></div>
+                      </div>
+                      <script>
+                      function createChart() {
+                       $("#chart1").kendoChart({
+
+                           legend: {
+                               position: "top"
+                           },
+
+                      chartArea: {
+                      width: 250,
+                      height: 250
+                      },
+                      //seriesColors: ["#ee9c4f",indigo],
+                           series: [{
+                               type: "line",
+                               data: [45, 15, 55, 40, 30, 35],
+                               name: "Target",
+                               color: "#ee9c4f",
+                               axis: "sales"
+                           }, {
+                               type: "bar",
+                               data: [50, 20, 55, 35, 28, 30],
+                               name: "Sales",
+                               color: "#3f51b5",
+                               axis: "sales"
+                           }],
+                           valueAxes: [{
+                      labels: {
+                                   format: "{0}k"
+                               },
+                               name: "sales",
+                      //color: "#007eff",
+                               min: 0,
+                               max: 70
+                           }],
+
+                           categoryAxis: {
+                               categories: ["Jan", "Mar", "May", "Jul", "Sep", "Nov"],
+                               // Align the first two value axes to the left
+                               // and the last two to the right.
+                               //
+                               // Right alignment is done by specifying a
+                               // crossing value greater than or equal to
+                               // the number of categories.
+                               axisCrossingValues: [0, 32],
+                               justified: true
+                           },
+                           tooltip: {
+                               visible: true,
+                               format: "{0}k",
+                               template: "#= category #/03: #= value #"
+                           }
+                       });
+                      }
+
+                      $(document).ready(createChart);
+                      $(document).bind("kendo:skinChange", createChart);
+                      </script>
+                    </div>
+                    </md-card-content>
+                  </md-card>
+            </div>
+            <div layout-margin layout-padding layout-fill >
+                <h4>Productivity</h4>
+                <md-card>
+                  <md-card-content>
+                      <md-input-container class="md-primary col-sm-6 md-default-theme md-input-has-value">
+                        <label style = "text-align: left; float: left;">% Success </label>
+                        <input type="text" name="Agent" ng-model="project.percSuccess" ng-readonly="true" tabindex="0" />
+                      </md-input-container>
+
+                      <md-input-container class="col-sm-6 md-default-theme md-input-has-value">
+                      <label style = "text-align: left; float: left;">Avg Sales</label>
+                        <input type="text" name="Schemes" ng-model="project.avgSales" ng-readonly="true"  tabindex="0" required/>
+                      </md-input-container>
+                      <md-input-container class="md-primary col-sm-6 md-default-theme md-input-has-value">
+                        <label style = "text-align: left; float: left;"># of visits</label>
+                        <input type="text" name="Agent" ng-model="project.noVisits" ng-readonly="true" tabindex="0" />
+                      </md-input-container>
+                    <md-input-container class="md-primary col-sm- md-default-theme md-input-has-value">
+                        <label style = "text-align: left; float: left;">Rank</label>
+                        <input type="text" name="Agent" ng-model="project.rank" ng-readonly="true" tabindex="0" />
+                      </md-input-container>
+                      <md-input-container class="md-primary col-sm-12 md-default-theme md-input-has-value">
+                        <label style = "text-align: left; float: left;">Return Execution</label>
+                        <input type="text" name="Agent" ng-model="project.returnExecution" ng-readonly="true" tabindex="0" />
+                      </md-input-container>
+                  </md-card-content>
+                 </md-card>
+            </div>
+            <div layout-margin layout-paddinglayout-fill >
+              <h4>Balance Vs Payments</h4>
+              <md-card>
+
+                  <md-card-content>
+                  <div id="example">
+                  <div class="demo-section k-content">
+                  <div id="chart" ></div>
+                  </div>
+                  <script>
+                  function createChart() {
+                  $("#chart").kendoChart({
+                  legend: {
+                     position: "top"
+                  },
+                  chartArea: {
+                  width: 250,
+                  height: 250
+                  },
+                  seriesColors: ["#4CAF50","#ee9c4f"],
+                  series: [{
+                     name: "Payment",
+                     data: [3, 7, 7, 5, 8, 6],
+                  }, {
+                     name: "Balance",
+                     data: [4, 7, 7, 6, 8, 8]
+                  }],
+                  valueAxis: {
+                     labels: {
+                         format: "{0}k"
+                     },
+                     line: {
+                         visible: false
+                     },
+                  min: 0,
+                     max: 12,
+                     axisCrossingValue: 0
+                  },
+                  categoryAxis: {
+                     categories: ['Jan','Feb' , 'Mar', 'Apr', 'May', 'Jun'],
+                     line: {
+                         visible: false
+                     },
+                     labels: {
+                         padding: {top: 0}
+                     }
+                  },
+                  tooltip: {
+                     visible: true,
+                     format: "{0}",
+                     template: "#= series.name #: #= value #"
+                  }
+                  });
+                  }
+
+                  $(document).ready(createChart);
+                  $(document).bind("kendo:skinChange", createChart);
+                  </script>
+                  </div>
+
+
+
+                  </md-card-content>
+              </md-card>
+            </div>
+
+          </div>
+       

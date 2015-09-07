@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+   <link  rel="stylesheet" href="assets/styles/angular-material.css" >
+   <link  rel="stylesheet" href="assets/styles/tmx_styles.css" >
+   <link rel="stylesheet" href="assets/styles/font-awesome/css/font-awesome.min.css">
+   <link rel="stylesheet" href="assets/styles/kendo.common-material.min.css" />
+   <link rel="stylesheet" href="assets/styles/kendo.material.min.css" />
+   <link rel="stylesheet" href="assets/styles/bootstrap.min.css" />
+
+   <script src="https://kendo.cdn.telerik.com/2015.2.624/js/jquery.min.js"></script>
+   <script src="https://kendo.cdn.telerik.com/2015.2.624/js/angular.min.js"></script>
+
+   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular-route.min.js"></script>
+  
+
+   <script type="text/javascript" src="scripts/clickoutside.directive.js"></script>
+   <script src="https://kendo.cdn.telerik.com/2015.2.624/js/kendo.all.min.js"></script>
+   <script src="scripts/ui-bootstrap-tpls-0.13.3.min.js"></script>
+
+   <script src="scripts/angular-animate.js"></script>
+   <script src="scripts/angular-aria.js"></script>
+   <script src="scripts/angular-material.js"></script>
+   <script src="scripts/Main.js"></script>
+
+   <script src="MasterData/controllers/MasterDataCtrl.js"></script>
+   <script src="MasterData/services/sharedProperties.js"></script>
+   <script src="MasterData/controllers/ManageCustomerContentCtrl.js"></script>
+   <script src="MasterData/controllers/ManageDistributorContentCtrl.js"></script>
+   <script src="LeftNavigationBar/controllers/LeftCtrl.js"></script>
+   <script src="MasterData/controllers/TopCtrl.js"></script>
+   <script src="MasterData/controllers/RightCtrl.js"></script>
+   <script src="MasterData/directives/rightNav/rightNavigationBar.js"></script>
+   <script src="MasterData/directives/rightNav/rightNavigationBarOnClick.js"></script>
+   <script src="MasterData/directives/topBar/topBarComp.js"></script>
+   <script src="MasterData/directives/topBar/topBarMob.js"></script>
+   
+   
+ </head>
+ <body>
+   <div ng-app="MasterData" ng-controller="MasterDataCtrl"  style="height:100%; width:100%;">
+     <div    layout-fill  layout="column" class="bggray" style="position:relative;"  >
+
+      <div style="background-color:red;" ng-class="Margin" layout="row" flex >
+        <section layout="row"  flex>
+
+          <!--left panel in mobile devices-->
+          <div ng-app="LeftNavigationBar" ng-controller="LeftCtrl"  ng-include="'LeftNavigationBar/partials/leftNav-Mob.html'">
+          </div>
+
+          <!--Main Panel -->
+          <md-content flex layout="row" class="bggray">
+
+            <!--left panel in computer-->
+            <div ng-app="LeftNavigationBar" ng-controller="LeftCtrl"  ng-include="'LeftNavigationBar/partials/leftNav-Comp.html'" class=" leftpanel bgwhite" layout-fill ng-hide="smallLeft" layout="column"  layout-fill hide-sm >
+            </div>
+            <!--left panel in computer-->
+
+            <!--Globalization example (uncomment this code to check globalization)--><!-- 
+            <div>
+                  <p>ASP.NET {{'Introduction' | Translate:this}}</p>
+                  <select ng-model="CurrentLang" ng-options="item.label for item in LangList" ng-change="updateLangDictionary()"></select>
+            </div>   
+            -->
+
+            <!-- Content box-->     
+             <div flex>
+             <div ng-view></div>
+             </div>
+            <!-- Content box-->
+
+             <!-- Right Panel-->
+            <div right-navigation-bar></div>
+            <!-- Right Panel-->
+
+          </md-content>
+          <!-- Main Panel-->
+
+          <!-- Right Panel-->
+          <md-sidenav  right-navigation-bar-on-click class=" md-sidenav-right md-whiteframe-z2" md-component-id="right" ng-blur="resizeleft(); closeLeft();"  >
+          </md-sidenav>
+
+          
+        </section>
+      </div>
+      
+      <!-- topbar in tabs, and computer-->
+      <div  top-bar-comp></div>
+
+      
+      <!-- topbar in mobile devices-->
+      <div  top-bar-mob></div>
+
+
+     </div>
+   </div>
+   
+ </body>
+
+</html>

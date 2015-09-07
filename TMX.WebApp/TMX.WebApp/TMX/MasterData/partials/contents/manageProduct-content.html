@@ -1,0 +1,95 @@
+﻿<div layout="column" flex layout-fill>
+    <div layout="column" class="contentbox">
+
+        <div>
+
+        </div>
+
+        <div layout="column" style="margin-top:20px;">
+           
+            <div layout-fill>
+                <ol class="breadcrumb fontDroid">
+                    <li><a href="dashboard.html">Home</a></li>
+                    <li>Product Management</li>
+
+                </ol>
+            </div>
+            <div class="bgwhite" layout-fill style=" position:relative;top:3px; height:64px;   border-radius: 5px;">
+                <div layout="row" layout-align="space-between center" flex>
+                    <div layout-margin>
+                        <input type="text" class="form-control" placeholder="{{'Search'| Translate:this}}" name="srch-term" id="TableSearch1" style="border-radius: 5px; width:160px; float:left;">
+
+
+                        <button class="btn btn-default" type="submit" style="border-radius: 0px 5px 5px 0px; position:relative; right:5px;">
+                            <i class="fa fa-search"></i>
+                            <script>
+
+                                function onReady() {
+
+
+
+                                    $("#TableSearch1").change(function () {
+
+                                        var q = $("#TableSearch1").val();
+                                        var grid = $("#kGrid").data("kendoGrid");
+                                        //alert(q);
+
+                                        grid.dataSource.query({
+                                            page: 1,
+                                            pageSize: 20,
+                                            filter: {
+                                                logic: "or",
+                                                filters: [
+                                              { field: "ProductCode", operator: "contains", value: q },
+                                                          { field: "ProductName", operator: "contains", value: q },
+                                              { field: "ProductType", operator: "contains", value: q },
+                                              { field: "ProductClass", operator: "contains", value: q },
+                                              { field: "Principal", operator: "contains", value: q },
+                                              { field: "Weight", operator: "contains", value: q },
+                                              { field: "WeightUOM", operator: "contains", value: q },
+                                              { field: "PrimaryUOM", operator: "contains", value: q },
+                                               { field: "SecondaryUOM", operator: "contains", value: q },
+                                                { field: "Status", operator: "contains", value: q }
+
+
+                                                ]
+                                            }
+                                        });
+                                    });
+
+
+                                }
+
+                                $(document).ready(onReady);
+
+                            </script>
+                        </button>
+                    </div>
+                    <div>
+                        <md-button class="md-fab md-primary md-mini" aria-label="Profile">
+                            <md-icon md-svg-src="" class="fa fa-plus fa-lg" ng-click="open()"></md-icon>
+                        </md-button>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div layout="column" class="bgwhite" ng-repeat="row in mainGridOptions.dataSource.data" hide show-sm>
+                    <div layout="row"> <div layout-padding flex> Product Code</div><div layout-padding>{{row.ProductCode}}</div></div>
+                    <div layout="row"> <div layout-padding flex> Product Name</div><div layout-padding>{{row.ProductName}}</div></div>
+                    <div layout="row"> <div layout-padding flex> Product Type</div><div layout-padding> {{row.ProductType}}</div></div>
+                    <div layout="row"> <div layout-padding flex> Product Class</div><div layout-padding> {{row.ProductClass}}</div></div>
+                    <div layout="row"> <div layout-padding flex> Principal</div><div layout-padding> {{row.Principal}}</div></div>
+                    <div layout="row"> <div layout-padding flex> Weight</div><div layout-padding> {{row.Weight}}</div></div>
+                    <div layout="row"> <div layout-padding flex> Weight UOM</div><div layout-padding> {{row.WeightUOM}}</div></div>
+                    <div layout="row"> <div layout-padding flex> Primary UOM</div><div layout-padding> {{row.PrimaryUOM}}</div></div>
+                    <div layout="row"> <div layout-padding flex> Secondary UOM</div><div layout-padding> {{row.SecondaryUOM}}</div></div>
+                    <div layout="row"> <div layout-padding flex> Status</div><div layout-padding> {{row.Status}}</div></div>
+                    <div layout="row"> <div layout-padding flex>Actions</div><div layout-padding><a href=""><i class="fa fa-pencil fa-lg tablehyperlink" ng-click="open()"></i></a><a href=""><i class="fa fa-trash-o fa-lg tablehyperlink"></i></a> </div></div>
+                    <md-divider ng-if="!$last"></md-divider>
+                </div>
+
+            </div>
+            <kendo-grid id="kGrid" options="mainGridOptions" hide-sm> </kendo-grid>
+        </div>
+    </div>
+</div>

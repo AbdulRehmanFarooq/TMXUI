@@ -1,0 +1,105 @@
+﻿<div class="modal-header bggreen">
+    <button type="button" class="close" aria-label="Close" ng-click="cancel()"><span aria-hidden="true">&times;</span></button>
+    <h4 class="white fontDroid">Add New Company</h4>
+</div>
+<div class="modal-body">
+    <md-tabs md-dynamic-height md-border-bottom md-stretch-tabs md-selected="0">
+        <md-tab label="Company">
+            <md-content class="md-padding">
+
+                <form name="projectForm">
+
+
+                    <div layout layout-md="column">
+                        <md-input-container style="width:48%; padding-right:20px;">
+                            <label style="font-size:13px; font-style:normal; font-weight:normal;">Company Code</label>
+                            <input required name="CreditStatus" ng-model="project.CreditStatus">
+                        </md-input-container>
+                        <md-input-container style="width:50%">
+                            <label style="font-size:13px; font-style:normal; font-weight:normal;">Company Name</label>
+                            <input required name="CreditName" ng-model="project.Name">
+                        </md-input-container>
+                    </div>
+                    <div layout layout-md="column">
+                        <md-input-container style="width:48%; padding-right:20px;">
+                            <label style="font-size:13px; font-style:normal; font-weight:normal;">Company Type</label>
+                            <input required name="OutstandingCashMemo" ng-model="project.OutstandingCashMemo">
+                        </md-input-container>
+
+                    </div>
+                </form>
+
+
+            </md-content>
+        </md-tab>
+        <md-tab label="Address">
+            <md-content class="md-padding">
+                <form name="projectForm1">
+                    <div layout layout-md="column">
+                        <md-input-container style="width:48%; padding-right:20px;">
+                            <label style="font-size:13px; font-style:normal; font-weight:normal;">Country</label>
+                            <input list="Country">
+                            <datalist id="Country">
+                                <option value="Country A">
+                                <option value="Country B">
+                                <option value="Country C">
+                                <option value="Country D">
+                            </datalist>
+                        </md-input-container>
+                        <md-input-container style="width:50%">
+                            <label style="font-size:13px; font-style:normal; font-weight:normal;">Province</label>
+                            <input list="Province">
+                            <datalist id="Province">
+                                <option value="Province A">
+                                <option value="Province B">
+                                <option value="Province C">
+                                <option value="Province D">
+                            </datalist>
+                        </md-input-container>
+                    </div>
+                    <div layout layout-md="column">
+                        <md-input-container style="width:48%; padding-right:20px;">
+                            <label style="font-size:13px; font-style:normal; font-weight:normal;">City</label>
+                            <input list="City">
+                            <datalist id="City">
+                                <option value="City A">
+                                <option value="City B">
+                                <option value="City C">
+                                <option value="City D">
+                            </datalist>
+                        </md-input-container>
+
+                        <md-input-container style="width:48%; padding-right:20px;">
+                            <label style="font-size:13px; font-style:normal; font-weight:normal;">Postal Code </label>
+                            <input required>
+                        </md-input-container>
+
+                    </div>
+                    <div layout layout-md="column">
+                        <md-input-container style="width:48%; padding-right:20px;">
+                            <label style="font-size:13px; font-style:normal; font-weight:normal;">Address</label>
+                            <textarea required  ></textarea>
+                        </md-input-container>
+                        <md-input-container style="width:48%; padding-right:20px;">
+                            <label style="font-size:13px; font-style:normal; font-weight:normal;">Phone </label>
+                            <input required>
+                        </md-input-container>
+
+                    </div>
+                </form>
+            </md-content>
+        </md-tab>
+
+    </md-tabs>
+
+
+
+
+
+</div>
+<div class="modal-footer">
+
+    <md-button class="md-primary" ng-click="cancel()">Close</md-button>
+    <md-button class="md-primary" ng-click="ok()">Save</md-button>
+
+</div>

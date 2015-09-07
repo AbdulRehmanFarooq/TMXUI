@@ -1,0 +1,116 @@
+﻿<div class="modal-header bggreen">
+    <button type="button" class="close" aria-label="Close" ng-click="cancel()"><span aria-hidden="true">&times;</span></button>
+    <h4 class="white fontDroid">Add Supplier</h4>
+</div>
+<div class="modal-body">
+    <md-tabs md-dynamic-height md-border-bottom md-stretch-tabs md-selected="0">
+        <md-tab label="Supplier">
+            <md-content class="md-padding">
+
+                <form name="projectForm">
+                    <div layout layout-md="column">
+                        <md-input-container style="width:48%; padding-right:20px;">
+                            <label style="font-size:13px; font-style:normal; font-weight:normal;">Supplier Code</label>
+                            <input type="text"  required name="CreditStatus" ng-model="project.CreditStatus">
+                        </md-input-container>
+                        <md-input-container style="width:50%">
+                            <label style="font-size:13px; font-style:normal; font-weight:normal;">Supplier Name</label>
+                            <input type="text" required name="CreditName" ng-model="project.Name">
+                        </md-input-container>
+                    </div>
+                    <div layout layout-md="column">
+                        <md-input-container style="width:48%; padding-right:20px;">
+                            <label style="font-size:13px; font-style:normal; font-weight:normal;">Supplier Type</label>
+                            <input list="SupplierType">
+                            <datalist id="SupplierType">
+                                <option value="Example1">
+                                <option value="Example2">
+                            </datalist> 
+                        </md-input-container>
+                        <md-input-container style="width:50%">
+                            <label style="font-size:13px; font-style:normal; font-weight:normal;">Location Name</label>
+                            <input type="text"  required name="OperationUnit" ng-model="project.OperationUnit">
+                        </md-input-container>
+                    </div>
+                    <div layout layout-md="column">
+                        <md-input-container style="width:48%; padding-right:20px;">
+                            <label style="font-size:13px; font-style:normal; font-weight:normal;">Classification</label>
+                            <input type="text"  required name="location" ng-model="project.location">
+                        </md-input-container>
+                        <md-input-container style="width:50%; ">
+                            <label style="font-size:13px; font-style:normal; font-weight:normal;">Company Name</label>
+                            <input list="CompanyName">
+                            <datalist id="CompanyName">
+                                <option value="Example3">
+                                <option value="Example5">
+                            </datalist> 
+                        </md-input-container>
+                    </div>
+                    
+                </form>
+
+
+
+
+            </md-content>
+        </md-tab>
+        <md-tab label="Address">
+            <md-content class="md-padding">
+                <form name="projectForm1">
+                    <div layout layout-md="column">
+                        <md-input-container style="width:48%; padding-right:20px;">
+                            <label style="font-size:13px; font-style:normal; font-weight:normal;">Country</label>
+                            <input list="Country">
+                            <datalist id="Country">
+                                <option value="Example7">
+                                <option value="Example8">
+                            </datalist> 
+                        </md-input-container>
+                        <md-input-container style="width:50%; ">
+                            <label style="font-size:13px; font-style:normal; font-weight:normal;">Province</label>
+                            <input list="Province">
+                            <datalist id="Province">
+                                <option value="Example11">
+                                <option value="Example12">
+                            </datalist>
+                        </md-input-container>
+                    </div>
+                    <div layout layout-md="column">
+                        <md-input-container style="width:48%; padding-right:20px;">
+                            <label style="font-size:13px; font-style:normal; font-weight:normal;">City</label>
+                            <input list="City">
+                            <datalist id="City">
+                                <option value="Example9">
+                                <option value="Example10">
+                            </datalist>
+                        </md-input-container>
+                        <md-input-container style="width:50%; ">
+                            <label style="font-size:13px; font-style:normal; font-weight:normal;">Postal Code</label>
+                            <input type="text" required name="taxRate" ng-model="project.taxRate">
+                        </md-input-container>
+                    </div>
+                    <div layout layout-md="column">
+                        <md-input-container style="width:48%; padding-right:20px;">
+                            <label style="font-size:13px; font-style:normal; font-weight:normal;">Address</label>
+                            <input type="text" required name="location" ng-model="project.location">
+                        </md-input-container>
+                        <md-input-container style="width:50%; ">
+                            <label style="font-size:13px; font-style:normal; font-weight:normal;">Phone</label>
+                            <input type="tel" required name="taxRate" ng-model="project.taxRate">
+                        </md-input-container>
+                    </div>
+                </form>
+            </md-content>
+        </md-tab>
+
+    </md-tabs>
+
+
+
+</div>
+<div class="modal-footer">
+
+    <md-button class="md-primary" ng-click="cancel()">Close</md-button>
+    <md-button class="md-primary" ng-click="ok()">Save</md-button>
+
+</div>

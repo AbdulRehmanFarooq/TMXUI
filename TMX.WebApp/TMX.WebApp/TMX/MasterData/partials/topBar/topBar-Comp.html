@@ -1,0 +1,51 @@
+<div class="topbar" style="position:absolute; top:0px; width:100%" layout="row" hide-sm >
+        <div class="leftpanel" ng-hide="smallLeft"   >
+          <img id="tmximg" src="assets/images/logo-white.png" alt="."  >
+        </div>
+        <div style="width:60px;" ng-hide="!smallLeft">
+
+        </div>
+        <div  layout="row" layout-margin flex layout-align="space-between center"  >
+         <div  class="white" ng-hide="Search" flex>
+
+          <span > {{pageTitle}} </span>
+
+         </div>
+         <div  class="white" ng-hide="!Search" >
+           <md-button class="md-icon-button" aria-label="More" ng-click="Search=!Search">
+               <md-icon md-svg-icon="" class="fa fa-arrow-left fa-lg white" ></md-icon>
+           </md-button>
+         </div>
+         <div  class="white" ng-hide="!Search" flex>
+               <input type="text" class="searchinput" placeholder="Search"  />
+         </div>
+            <div layout="row" layout-align="start center" ng-controller="TopContentCtrl">
+                <div ng-hide="Search" dropdown is-open="status.isopen">
+                    <md-button class="md-icon-button" aria-label="More" ng-click="Search=!Search">
+                        <md-icon md-svg-icon="" class="fa fa-search white fa-lg"></md-icon>
+                    </md-button>
+                    <md-button class="md-icon-button" aria-label="More" ng-click="  ">
+                        <md-icon md-svg-icon="" class="fa fa-cog white fa-lg"></md-icon>
+                    </md-button>
+                    <md-button class="md-icon-button" aria-label="More" dropdown-toggle ng-disabled="disabled">
+                        <md-icon md-svg-icon="" class="fa fa-ellipsis-v white fa-lg"></md-icon>
+                    </md-button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="single-button" style="top:-5px; left:30px;">
+                        <li role="menuitem"><a href="#">My Profile</a></li>
+                        <li role="menuitem"><a href="#">Log out</a></li>
+                        <li role="menuitem"><a href="#">Folded Aside</a></li>
+                        <li class="divider"></li>
+                        <li role="menuitem"><a href="#">Help</a></li>
+                        <li role="menuitem"><a href="#">Feedback</a></li>
+                    </ul>
+                </div>
+                <div ng-hide="!Search">
+                    <md-button class="md-icon-button" aria-label="More">
+                        <md-icon md-svg-icon="" class="fa fa-microphone white fa-lg"></md-icon>
+                    </md-button>
+
+                </div>
+
+            </div>
+       </div>
+       </div>

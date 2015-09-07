@@ -1,0 +1,196 @@
+<div layout="column" flex layout-fill >
+                  <div layout="column" class="contentbox" >
+
+                  <div>
+                    <script type="text/ng-template" id="myModalContent.html">
+                        <div class="modal-header">
+                            <h3 class="modal-title">Im a modal!</h3>
+                        </div>
+                        <div class="modal-body">
+                        <md-tabs md-dynamic-height md-border-bottom md-stretch-tabs md-selected="0">
+                                     <md-tab label="Customer">
+                                     <md-content class="md-padding">
+
+                                     <form name="projectForm">
+                                                               <div layout layout-md="column">
+                                                                  <md-input-container style="width:48%; padding-right:20px;">
+                                       <label style="font-size:13px; font-style:normal; font-weight:normal;">Customer Code</label>
+                                       <input   required name="CreditStatus" ng-model="project.CreditStatus">
+
+                                                                 <div ng-messages="projectForm.CreditStatus.$error" ng-if='projectForm.CreditStatus.$dirty' >
+                                         <div ng-message="required">This is required.</div>
+                                       </div>
+                                       </md-input-container>
+                                       <md-input-container  style="width:50%">
+                                       <label style="font-size:13px; font-style:normal; font-weight:normal;">Customer Name</label>
+                                       <input required name="CreditName" ng-model="project.Name">
+                                       <div ng-messages="projectForm.CreditName.$error" ng-if='projectForm.CreditName.$dirty' >
+                                         <div ng-message="required">This is required.</div>
+                                       </div>
+                                       </md-input-container>
+                                                                 </div>
+                                                                 <div layout layout-md="column">
+                                       <md-input-container style="width:48%; padding-right:20px;">
+                                       <label style="font-size:13px; font-style:normal; font-weight:normal;">Customer Type</label>
+                                       <input required name="OutstandingCashMemo" ng-model="project.OutstandingCashMemo" >
+                                       <div ng-messages="projectForm.OutstandingCashMemo.$error" ng-if='projectForm.OutstandingCashMemo.$dirty'>
+                                         <div ng-message="required">This is required.</div>
+                                       </div>
+                                       </md-input-container>
+                                       <md-input-container style="width:50%" >
+                                       <label style="font-size:13px; font-style:normal; font-weight:normal;">Operating Unit</label>
+                                       <input required name="OperationUnit" ng-model="project.OperationUnit">
+                                       <div ng-messages="projectForm.OperationUnit.$error" ng-if='projectForm.OperationUnit.$dirty'>
+                                         <div ng-message="required">This is required.</div>
+                                       </div>
+                                       </md-input-container>
+                                                                 </div>
+
+                                                                 <div layout layout-md="column">
+                                                                      <md-input-container style="width:48%; padding-right:20px;">
+                                       <label style="font-size:13px; font-style:normal; font-weight:normal;">Classification</label>
+                                       <input required name="Classification" ng-model="project.Classification" >
+                                       <div ng-messages="projectForm.Classification.$error" ng-if='projectForm.Classification.$dirty'>
+                                         <div ng-message="required">This is required.</div>
+                                       </div>
+                                       </md-input-container >
+                                       <md-input-container style="width:50%;">
+                                       <label style="font-size:13px; font-style:normal; font-weight:normal;">Payment Type</label>
+                                       <input required name="paymentType" ng-model="project.paymentType">
+                                       <div ng-messages="projectForm.paymentType.$error" ng-if='projectForm.paymentType.$dirty'>
+                                         <div ng-message="required">This is required.</div>
+                                       </div>
+                                       </md-input-container>
+
+                                                                 </div>
+
+                                                                 <div layout layout-md="column">
+                                       <md-input-container style="width:48%; padding-right:20px;">
+                                       <label style="font-size:13px; font-style:normal; font-weight:normal;">Location</label>
+                                       <input required name="location" ng-model="project.location">
+                                       <div ng-messages="projectForm.location.$error" ng-if='projectForm.location.$dirty'>
+                                         <div ng-message="required">This is required.</div>
+                                       </div>
+                                       </md-input-container>
+                                       <md-input-container style="width:50%; ">
+                                       <label style="font-size:13px; font-style:normal; font-weight:normal;">Tax Rate</label>
+                                       <input required name="taxRate" ng-model="project.taxRate">
+                                       <div ng-messages="projectForm.OperationUnit.$error" ng-if='projectForm.taxRate.$dirty' >
+                                         <div ng-message="required">This is required.</div>
+                                       </div>
+                                       </md-input-container>
+                                                                 </div>
+
+                                      </form>
+
+
+
+
+                                      </md-content>
+                                     </md-tab>
+                                     <md-tab label="Details">
+                                     <md-content class="md-padding">
+                                       <form name="projectForm1">
+                                       <md-input-container>
+                                       <label style="font-size:13px; font-style:normal; font-weight:normal;">Credit Status</label>
+                                       <input required name="detailsCreditStatus" ng-model="project.detailsCreditStatus">
+                                       <div ng-messages="projectForm1.detailsCreditStatus.$error" ng-if='projectForm1.detailsCreditStatus.$dirty' >
+                                         <div ng-message="required">This is required.</div>
+                                       </div>
+                                       </md-input-container>
+                                       <md-input-container>
+                                       <label style="font-size:13px; font-style:normal; font-weight:normal;">Credit Limit</label>
+                                       <input required name="detailsCreditType" ng-model="project.detailsCreditType">
+                                       <div ng-messages="projectForm1.detailsCreditType.$error" ng-if='projectForm1.detailsCreditType.$dirty'>
+                                         <div ng-message="required">This is required.</div>
+                                       </div>
+                                       </md-input-container>
+                                       <md-input-container>
+                                       <label style="font-size:13px; font-style:normal; font-weight:normal;">Outstanding Cash Memo</label>
+                                       <input required name="detailsOutstandingCashMemo" ng-model="project.detailsOutstandingCashMemo">
+                                       <div ng-messages="projectForm1.detailsOutstandingCashMemo.$error" ng-if='projectForm1.detailsOutstandingCashMemo.$dirty'>
+                                         <div ng-message="required">This is required.</div>
+                                       </div>
+                                       </md-input-container>
+                                       <md-input-container>
+                                       <label style="font-size:13px; font-style:normal; font-weight:normal;">Total Outstanding Amount</label>
+                                       <input required name="detailsOperationUnit" ng-model="project.detailsOperationUnit">
+                                       <div ng-messages="projectForm1.detailsOperationUnit.$error" ng-if='projectForm1.detailsOperationUnit.$dirty'>
+                                         <div ng-message="required">This is required.</div>
+                                       </div>
+                                       </md-input-container>
+
+                                     </form></md-content>
+                                     </md-tab>
+
+                                   </md-tabs>
+
+
+
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
+                            <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+                        </div>
+                    </script>
+
+
+                </div>
+                
+                     <div layout="column" style="margin-top:20px;">
+                       <div  class="bgwhite" layout-fill style=" position:relative;top:3px; height:64px;   border-radius: 5px;">
+                           <div layout="row" layout-align="space-between center" flex>
+                            <div layout-margin>
+                              <input type="text" class="form-control" placeholder="Search" name="srch-term" id="TableSearch1" style="border-radius: 5px; width:160px; float:left;">
+                               <button class="btn btn-default" type="submit" style="border-radius: 0px 5px 5px 0px; position:relative; right:5px;"><i class="fa fa-search"></i>
+                                  <script>
+
+                                      function onReady()
+                                     {
+
+
+
+                                      $("#TableSearch1").change(function(){
+
+                                     var q = $("#TableSearch1").val();
+                                         var grid = $("#kGrid").data("kendoGrid");
+                                     //alert(q);
+                                         grid.dataSource.query({
+                                           page:1,
+                                           pageSize:20,
+                                           filter:{
+                                             logic:"or",
+                                             filters:[
+                                           {field: "CustomerCode",operator:"contains",value:q},
+                                                       {field: "CustomerName",operator:"contains",value:q},
+                                           {field: "CustomerType",operator:"contains",value:q},
+                                           {field: "CustomerClass",operator:"contains",value:q},
+                                           {field: "Distributor",operator:"contains",value:q},
+                                           {field: "EndDate",operator:"contains",value:q},
+                                           {field: "CustomerLocation", operator:"contains",value:q},
+                                           {field: "PopStatus", operator:"contains",value:q}
+
+                                           ]
+                                            }
+                                         });
+                                     });
+
+
+                                     }
+
+                                     $(document).ready(onReady);
+
+                                     </script>
+                               </button>
+                            </div>
+                            <div>
+                              <md-button class="md-fab md-primary md-mini" aria-label="Profile">
+                                <md-icon md-svg-src="" class="fa fa-plus fa-lg" ng-click="open()"></md-icon>
+                            </md-button>
+                            </div>
+                          </div>
+                     </div>
+                       <kendo-grid id="kGrid" options="mainGridOptions"> </kendo-grid>
+                     </div>
+                   </div>
+                   </div>

@@ -1,0 +1,82 @@
+<div layout="column" flex layout-fill>
+    <div layout="column" class="contentbox">
+
+        <div>
+
+        </div>
+
+        <div layout="column" style="margin-top:20px;">
+            <div layout-fill>
+                <ol class="breadcrumb fontDroid">
+                    <li><a href="dashboard.html">Home</a></li>
+                    <li>Company Management</li>
+
+                </ol>
+            </div>
+            <div class="bgwhite" layout-fill style=" position:relative;top:3px; height:64px;   border-radius: 5px;">
+                <div layout="row" layout-align="space-between center" flex>
+                    <div layout-margin>
+                        <input type="text" class="form-control" placeholder="Search" name="srch-term" id="TableSearch1" style="border-radius: 5px; width:160px; float:left;">
+                        <button class="btn btn-default" type="submit" style="border-radius: 0px 5px 5px 0px; position:relative; right:5px;">
+                            <i class="fa fa-search"></i>
+                            <script>
+
+                                function onReady() {
+
+
+
+                                    $("#TableSearch1").change(function () {
+
+                                        var q = $("#TableSearch1").val();
+                                        var grid = $("#kGrid").data("kendoGrid");
+                                        //alert(q);
+                                        grid.dataSource.query({
+                                            page: 1,
+                                            pageSize: 20,
+                                            filter: {
+                                                logic: "or",
+                                                filters: [
+                                              { field: "CustomerCode", operator: "contains", value: q },
+                                                          { field: "CustomerName", operator: "contains", value: q },
+                                              { field: "CustomerType", operator: "contains", value: q },
+                                              { field: "CustomerClass", operator: "contains", value: q },
+                                              { field: "Distributor", operator: "contains", value: q },
+                                              { field: "EndDate", operator: "contains", value: q },
+                                              { field: "CustomerLocation", operator: "contains", value: q },
+                                              { field: "PopStatus", operator: "contains", value: q }
+
+                                                ]
+                                            }
+                                        });
+                                    });
+
+
+                                }
+
+                                $(document).ready(onReady);
+
+                            </script>
+                        </button>
+                    </div>
+                    <div>
+                        <md-button class="md-fab md-primary md-mini" aria-label="Profile">
+                            <md-icon md-svg-src="" class="fa fa-plus fa-lg" ng-click="open()"></md-icon>
+                        </md-button>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div layout="column" class="bgwhite" ng-repeat="row in mainGridOptions.dataSource.data" hide show-sm>
+                    <div layout="row"> <div layout-padding flex> Company Code</div><div layout-padding>{{row.CompanyCode}}</div></div>
+                    <div layout="row"> <div layout-padding flex> Company Name</div><div layout-padding>{{row.CompanyName}}</div></div>
+                    <div layout="row"> <div layout-padding flex> Company Type</div><div layout-padding> {{row.CompanyType}}</div></div>
+                    <div layout="row"> <div layout-padding flex> Company Status</div><div layout-padding> {{row.CompanyStatus}}</div></div>
+                    <div layout="row"> <div layout-padding flex>Actions</div><div layout-padding><a href=""><i class="fa fa-pencil fa-lg tablehyperlink" ng-click="open()"></i></a><a href=""><i class="fa fa-trash-o fa-lg tablehyperlink"></i></a> </div></div>
+                    <md-divider ng-if="!$last"></md-divider>
+                </div>
+
+            </div>
+            <kendo-grid id="kGrid" options="mainGridOptions" hide-sm> </kendo-grid>
+        </div>
+    </div>
+</div>
