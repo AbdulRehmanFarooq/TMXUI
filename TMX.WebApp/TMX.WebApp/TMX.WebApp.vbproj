@@ -137,6 +137,7 @@
     <Content Include="TMX\MasterData.html" />
     <Content Include="TMX\MasterData\controllers\ManageCompanyContentCtrl.js" />
     <Content Include="TMX\MasterData\controllers\ManageCustomerContentCtrl.js" />
+    <Content Include="TMX\MasterData\controllers\ManageLocationContentCtrl.js" />
     <Content Include="TMX\MasterData\controllers\ManageDistributorContentCtrl.js" />
     <Content Include="TMX\MasterData\controllers\ManageProductContentCtrl.js" />
     <Content Include="TMX\MasterData\controllers\ManageSalesTargetContentCtrl.js" />
@@ -152,6 +153,7 @@
     <Content Include="TMX\MasterData\directives\topBar\topBarMob.js" />
     <Content Include="TMX\MasterData\partials\contents\manageCompany-content.html" />
     <Content Include="TMX\MasterData\partials\contents\manageCustomer-content.html" />
+    <Content Include="TMX\MasterData\partials\contents\manageLocation-content.html" />
     <Content Include="TMX\MasterData\partials\contents\manageDistributor-content.html" />
     <Content Include="TMX\MasterData\partials\contents\manageProduct-content.html" />
     <Content Include="TMX\MasterData\partials\contents\manageSalesTarget-content.html" />
