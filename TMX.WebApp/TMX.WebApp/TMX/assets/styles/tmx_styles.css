@@ -92,7 +92,7 @@ a{
 
  .white
  {
-   color: white;
+   color: white !important;
  }
 
  .navfont
@@ -128,9 +128,12 @@ a{
    background-color: white;
  }
 
+ .green{
+ color: #4caf50;
+ }
  .bggreen
  {
-   background-color: #4caf50;
+   background-color: #4caf50 !important;
  }
 
   .bggray
