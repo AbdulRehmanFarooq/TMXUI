@@ -62,8 +62,8 @@
            controller: 'ManageCompanyContentCtrl'
        })
        .when('/LocationManagement', {
-           templateUrl: 'MasterData/partials/contents/manageLocation-content.html',
-           controller: 'ManageLocationContentCtrl'
+           templateUrl: 'MasterData/partials/contents/manageProduct-content.html',
+           controller: 'ManageProductContentCtrl'
        })
        .when('/ProductManagement', {
            templateUrl: 'MasterData/partials/contents/manageProduct-content.html',
