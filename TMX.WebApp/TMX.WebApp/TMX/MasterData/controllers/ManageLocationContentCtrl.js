@@ -1,8 +1,8 @@
  angular
      .module('MasterData')
-     .controller('ManageDistributorContentCtrl', function ($scope, $timeout, $mdSidenav, $mdUtil, $modal, $log, $window, sharedProperties) {
+     .controller('ManageLocationContentCtrl', function ($scope, $timeout, $mdSidenav, $mdUtil, $modal, $log, $window, sharedProperties) {
 
-       sharedProperties.setProperty("Distributor Management");
+       sharedProperties.setProperty("Location Management");
          
        
 
@@ -11,7 +11,7 @@
         dataSource:{
 
 		  data:[
-                           { DistributorCode:"AN-0001-KHI",DistributorName:"KA",DistributorType:" General Trader",DistributorLocation:"Gulshan-e-Iqbal ",Status:"Order",Parent:"None",Edit:"  <a href=\"\"><i  class=\"fa fa-pencil fa-lg tablehyperlink\" ng-click=\"open()\"></i></a><a href=\"\"><i  class=\"fa fa-trash-o fa-lg tablehyperlink\"></i></a>"},
+                           { LocationCode: "AN-0001-KHI", LocationName: "KA", LocationType: " General Trader", ParentLocation: "Gulshan-e-Iqbal ", Status: "Order", Longitude: "None", Latitude:"None",EffectiveDate:"25-11-2016",Edit: "  <a href=\"\"><i  class=\"fa fa-pencil fa-lg tablehyperlink\" ng-click=\"open()\"></i></a><a href=\"\"><i  class=\"fa fa-trash-o fa-lg tablehyperlink\"></i></a>" },
 			   ],
           pageSize:20
         },
@@ -29,24 +29,24 @@
         columns:
                         [
 						{
-						    field: "DistributorCode",
-						    title: "Distributor Code",
+						    field: "LocationCode",
+						    title: "Location Code",
                             width:100
 
                         },
                         {
-                            field: "DistributorName",
-                            title: "Distributor Name",
+                            field: "LocationName",
+                            title: "Location Name",
                             width:140
 
                         },{
-                            field: "DistributorType",
-                            title: "Distributor Type",
+                            field: "LocationType",
+                            title: "Location Type",
                             width: 100
                         },
 						{
-                            field: "DistributorLocation",
-                            title: "Distributor Location",
+                            field: "ParentLocation",
+                            title: "Parent Location",
 							width: 140
                         },
 						{
@@ -55,10 +55,17 @@
                             width: 100
 						},
                         {
-                            field: "Parent",
-                            title: "Parent",
+                            field: "Longitude",
                             width: 100
                         },
+                         {
+                             field: "Latitude",
+                             width: 100
+                         },
+                          {
+                              field: "EffectiveDate",
+                              width: 100
+                          },
 						{
                             field: "Edit",
 							title:"  ",
@@ -78,7 +85,7 @@
 
            var modalInstance = $modal.open({
                animation: $scope.animationsEnabled,
-               templateUrl: 'MasterData/partials/modalWindow/modalDistributorAdd.html',
+               templateUrl: 'MasterData/partials/modalWindow/modalLocationAdd.html',
                controller: 'ModalInstanceCtrl',
                size: size,
                resolve: {
