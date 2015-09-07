@@ -39,6 +39,14 @@ a{
     text-decoration: none!important;
 }
 
+.k-header.k-grid-toolbar.ng-scope{
+    background-color: transparent!important;
+    border-bottom-color: lightgray!important;
+}
+.k-button {
+    background-color: #4caf50 !important;
+    border: none !important;
+}
 
 .topbar
  {
