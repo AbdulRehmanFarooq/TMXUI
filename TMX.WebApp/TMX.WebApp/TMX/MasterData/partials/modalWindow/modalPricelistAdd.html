@@ -1,0 +1,75 @@
+﻿<div class="modal-header bggreen">
+    <button type="button" class="close" aria-label="Close" ng-click="cancel()"><span aria-hidden="true">&times;</span></button>
+    <h4 class="white fontDroid">Add Pricelist</h4>
+</div>
+<div class="modal-body">
+    <md-tabs md-dynamic-height md-border-bottom md-stretch-tabs md-selected="0">
+        <md-tab label="Pricelist">
+            <md-content class="md-padding">
+
+                <form name="projectForm">
+
+
+                    <div layout layout-md="column">
+                        <md-input-container style="width:48%; padding-right:20px;">
+                            <label style="font-size:13px; font-style:normal; font-weight:normal;">Name</label>
+                            <input required name="CreditStatus" ng-model="project.CreditStatus">
+                        </md-input-container>
+                        <md-input-container style="width:50%">
+                            <label style="font-size:13px; font-style:normal; font-weight:normal;">Code</label>
+                            <input required name="CreditName" ng-model="project.Name">
+                        </md-input-container>
+                    </div>
+                    <div layout layout-md="column">
+                        <md-input-container style="width:48%; padding-right:20px;">
+                            <label style="font-size:13px; font-style:normal; font-weight:normal;">Start Date</label>
+                            <input required type="date" name="OutstandingCashMemo" ng-model="project.OutstandingCashMemo">
+                        </md-input-container>
+                        <md-input-container style="width:50%">
+                            <label style="font-size:13px; font-style:normal; font-weight:normal;">End Date</label>
+                            <input required type="date" name="CreditName" ng-model="project.Name">
+                        </md-input-container>
+                    </div>
+                    <div layout layout-md="column">
+                        <md-input-container style="width:48%; padding-right:20px;">
+                            <label style="font-size:13px; font-style:normal; font-weight:normal;">Description</label>
+                            <input required name="OutstandingCashMemo" ng-model="project.OutstandingCashMemo">
+                        </md-input-container>
+                        <md-input-container style="width:50%">
+                            <label style="font-size:13px; font-style:normal; font-weight:normal;">Distributors</label>
+                            <input list="Distributors">
+                            <datalist id="Distributors">
+                                <option value="Distributor 1">
+                                <option value="Distributor 2">
+                                <option value="Distributor 3">
+                                <option value="Distributor 4">
+                            </datalist>
+                        </md-input-container>
+
+                    </div>
+                </form>
+
+
+            </md-content>
+        </md-tab>
+        <md-tab label="Details">
+            <md-content class="md-padding">
+                <form name="projectForm1">
+                    <kendo-grid options="mainGridOptions2"> </kendo-grid>
+                </form>
+            </md-content>
+        </md-tab>
+
+    </md-tabs>
+
+
+
+
+
+</div>
+<div class="modal-footer">
+
+    <md-button class="md-primary" ng-click="cancel()">Close</md-button>
+    <md-button class="md-primary" ng-click="ok()">Save</md-button>
+
+</div>

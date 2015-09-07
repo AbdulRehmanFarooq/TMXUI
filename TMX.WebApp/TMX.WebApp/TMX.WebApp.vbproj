@@ -139,6 +139,7 @@
     <Content Include="TMX\MasterData\controllers\ManageCustomerContentCtrl.js" />
     <Content Include="TMX\MasterData\controllers\ManageLocationContentCtrl.js" />
     <Content Include="TMX\MasterData\controllers\ManageDistributorContentCtrl.js" />
+    <Content Include="TMX\MasterData\controllers\ManagePricelistContentCtrl.js" />
     <Content Include="TMX\MasterData\controllers\ManageProductContentCtrl.js" />
     <Content Include="TMX\MasterData\controllers\ManageSalesTargetContentCtrl.js" />
     <Content Include="TMX\MasterData\controllers\ManageSupplierContentCtrl.js" />
@@ -155,12 +156,14 @@
     <Content Include="TMX\MasterData\partials\contents\manageCustomer-content.html" />
     <Content Include="TMX\MasterData\partials\contents\manageLocation-content.html" />
     <Content Include="TMX\MasterData\partials\contents\manageDistributor-content.html" />
+    <Content Include="TMX\MasterData\partials\contents\managePricelist-content.html" />
     <Content Include="TMX\MasterData\partials\contents\manageProduct-content.html" />
     <Content Include="TMX\MasterData\partials\contents\manageSalesTarget-content.html" />
     <Content Include="TMX\MasterData\partials\contents\manageSupplier-content.html" />
     <Content Include="TMX\MasterData\partials\modalWindow\modalCompanyAdd.html" />
     <Content Include="TMX\MasterData\partials\modalWindow\modalCustomerAdd.html" />
     <Content Include="TMX\MasterData\partials\modalWindow\modalDistributorAdd.html" />
+    <Content Include="TMX\MasterData\partials\modalWindow\modalPricelistAdd.html" />
     <Content Include="TMX\MasterData\partials\modalWindow\modalProductAdd.html" />
     <Content Include="TMX\MasterData\partials\modalWindow\modalSalesTargetAdd.html" />
     <Content Include="TMX\MasterData\partials\modalWindow\modalSupplierAdd.html" />

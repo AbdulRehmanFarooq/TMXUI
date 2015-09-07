@@ -1,4 +1,4 @@
-<div layout="column" flex layout-fill>
+﻿<div layout="column" flex layout-fill>
     <div layout="column" class="contentbox">
 
         <div>
@@ -9,7 +9,7 @@
             <div layout-fill>
                 <ol class="breadcrumb fontDroid">
                     <li><a href="dashboard.html">Home</a></li>
-                    <li>Company Management</li>
+                    <li>Pricelist Management</li>
 
                 </ol>
             </div>
@@ -36,12 +36,11 @@
                                             filter: {
                                                 logic: "or",
                                                 filters: [
-                                              { field: "CompanyCode", operator: "contains", value: q },
-                                                          { field: "CompanyName", operator: "contains", value: q },
-                                              { field: "CompanyType", operator: "contains", value: q },
-                                              { field: "CustomerClass", operator: "contains", value: q },
-                                              { field: "CompanyStatus", operator: "contains", value: q },
-                                             
+                                              { field: "Code", operator: "contains", value: q },
+                                                          { field: "Name", operator: "contains", value: q },
+                                              { field: "StartDate", operator: "contains", value: q },
+                                              { field: "EndDate", operator: "contains", value: q },
+                                              { field: "Description", operator: "contains", value: q }
 
                                                 ]
                                             }
@@ -65,10 +64,11 @@
             </div>
             <div>
                 <div layout="column" class="bgwhite" ng-repeat="row in mainGridOptions.dataSource.data" hide show-sm>
-                    <div layout="row"> <div layout-padding flex> Company Code</div><div layout-padding>{{row.CompanyCode}}</div></div>
-                    <div layout="row"> <div layout-padding flex> Company Name</div><div layout-padding>{{row.CompanyName}}</div></div>
-                    <div layout="row"> <div layout-padding flex> Company Type</div><div layout-padding> {{row.CompanyType}}</div></div>
-                    <div layout="row"> <div layout-padding flex> Company Status</div><div layout-padding> {{row.CompanyStatus}}</div></div>
+                    <div layout="row"> <div layout-padding flex> Code </div><div layout-padding>{{row.Code}}</div></div>
+                    <div layout="row"> <div layout-padding flex> Name </div><div layout-padding>{{row.Name}}</div></div>
+                    <div layout="row"> <div layout-padding flex> StartDate </div><div layout-padding> {{row.StartDate}}</div></div>
+                    <div layout="row"> <div layout-padding flex> EndDate </div><div layout-padding> {{row.EndDate}}</div></div>
+                    <div layout="row"> <div layout-padding flex> Description </div><div layout-padding> {{row.Description}}</div></div>
                     <div layout="row"> <div layout-padding flex>Actions</div><div layout-padding><a href=""><i class="fa fa-pencil fa-lg tablehyperlink" ng-click="open()"></i></a><a href=""><i class="fa fa-trash-o fa-lg tablehyperlink"></i></a> </div></div>
                     <md-divider ng-if="!$last"></md-divider>
                 </div>

@@ -52,3 +52,12 @@ C:\Users\AbdulRehman\Documents\GitHub\TMXUI\TMX.WebApp\TMX.WebApp\obj\Debug\TMX.
 C:\Users\AbdulRehman\Documents\GitHub\TMXUI\TMX.WebApp\TMX.WebApp\obj\Debug\TMX.WebApp.dll
 C:\Users\AbdulRehman\Documents\GitHub\TMXUI\TMX.WebApp\TMX.WebApp\obj\Debug\TMX.WebApp.xml
 C:\Users\AbdulRehman\Documents\GitHub\TMXUI\TMX.WebApp\TMX.WebApp\obj\Debug\TMX.WebApp.pdb
+C:\Users\Administrator\Documents\GitHub\TMXUI\TMX.WebApp\TMX.WebApp\bin\TMX.WebApp.dll.config
+C:\Users\Administrator\Documents\GitHub\TMXUI\TMX.WebApp\TMX.WebApp\bin\TMX.WebApp.dll
+C:\Users\Administrator\Documents\GitHub\TMXUI\TMX.WebApp\TMX.WebApp\bin\TMX.WebApp.pdb
+C:\Users\Administrator\Documents\GitHub\TMXUI\TMX.WebApp\TMX.WebApp\bin\TMX.WebApp.xml
+C:\Users\Administrator\Documents\GitHub\TMXUI\TMX.WebApp\TMX.WebApp\obj\Debug\TMX.WebApp.Resources.resources
+C:\Users\Administrator\Documents\GitHub\TMXUI\TMX.WebApp\TMX.WebApp\obj\Debug\TMX.WebApp.vbproj.GenerateResource.Cache
+C:\Users\Administrator\Documents\GitHub\TMXUI\TMX.WebApp\TMX.WebApp\obj\Debug\TMX.WebApp.dll
+C:\Users\Administrator\Documents\GitHub\TMXUI\TMX.WebApp\TMX.WebApp\obj\Debug\TMX.WebApp.xml
+C:\Users\Administrator\Documents\GitHub\TMXUI\TMX.WebApp\TMX.WebApp\obj\Debug\TMX.WebApp.pdb

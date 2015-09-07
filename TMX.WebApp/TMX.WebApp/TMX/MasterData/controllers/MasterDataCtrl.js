@@ -69,6 +69,10 @@
            templateUrl: 'MasterData/partials/contents/manageProduct-content.html',
            controller: 'ManageProductContentCtrl'
        })
+      .when('/PricelistManagement', {
+          templateUrl: 'MasterData/partials/contents/managePricelist-content.html',
+          controller: 'ManagePricelistContentCtrl'
+      })
       
   }]).filter('Translate', function () {
       return translate;
