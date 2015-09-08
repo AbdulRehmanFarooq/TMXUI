@@ -11,13 +11,13 @@
               </div>
               <div layout="column" flex  layout-margin  layout-fill style="overflow-y: auto; max-height:{{LeftPanel}}px;" hide-sm >
                 <md-list>
-                   <md-subheader >Menu</md-subheader>
+                   <md-subheader >{{'Menu'| Translate: this}}</md-subheader>
                    <md-list-item layout="row"   ng-repeat="menulink in menuwithoutsub" ng-click="navclick(-1)" style="min-height:30px; height:36px;" >
                      <div >
                        <i class="fa {{menulink.icon}} menugrey fa-lg"> </i>
                      </div>
                      <div flex >
-                      <a href="#{{menulink.link}}">  <span class="navfont"> {{menulink.name}}</span> </a>
+                      <a href="#{{menulink.link}}">  <span class="navfont"> {{menulink.name | Translate: this}}</span> </a>
                      </div>
 
                   </md-list-item>
@@ -27,7 +27,7 @@
                             <i class="fa {{menutoggle.icon}} fa-lg menugrey">  </i>
                         </div>
                         <div flex>
-                          <span class="navfont"> {{menutoggle.name}}</span>
+                          <span class="navfont"> {{menutoggle.name | Translate: this}}</span>
                         </div>
                         <div>
                            <i class="fa fa-sort-desc fa-lg menugrey"  ng-animate="{enter: 'rotate', leave: 'rotateCounterwise'}" ng-class="{true: 'rotate', false: 'rotateCounterwise'}[!menutoggle.wanted]">  </i>
@@ -37,7 +37,7 @@
                       <div class="bgf3f3f3" >
                         <md-list ng-hide="menutoggle.wanted" class="animate-hide" >
                            <md-list-item ng-repeat="sub in menutoggle.subs" class="subnavfont" style="min-height:30px; height:36px;" >
-                                <a href="#{{sub.link}}"  > {{sub.title}} </a>
+                                <a href="#{{sub.link}}"  > {{sub.title | Translate: this}} </a>
                            </md-list-item>
                         </md-list>
                       </div>

@@ -52,67 +52,67 @@
             [
                 {
                     field: "CustomerCode",
-                    title: "Customer Code",
+                    title: "{{'Customer Code' | Translate: this}}",
                     width: 180,
                             },
                             {
                                 field: "CustomerName",
                                 encoded:false,
-                                title: "Customer Name",
+                                title: "{{'Customer Name' | Translate: this}}",
                                 width: 180,
 
                             },
                             {
                                 field: "CustomerType",
-                                title: "Customer Type",
+                                title: "{{'Customer Type' | Translate: this}}",
                                 width: 180,
                             },
                             {
                                 field: "CustomerClass",
-                                title: "Customer Class",
+                                title: "{{'Customer Class' | Translate: this}}",
                                 width: 180,
                             },
                             {
                                 field: "Distributor",
-                                title: "Distributor",
+                                title: "{{'Distributor' | Translate: this}}",
                                 width: 180,
                             },
                             {
                                 field: "CustomerLocation",
-                                title: "Customer Location",
+                                title: "{{'Customer Location' | Translate: this}}",
                                 width: 180
                             },
                             {
                                 field: "CreditLimit",
-                                title: "Credit Limit",
+                                title: "{{'Credit Limit' | Translate: this}}",
                                 width: 180,
                                
                             },
                             {
                                 field: "CreditStatus",
-                                title: "Credit Status",
+                                title: "{{'Credit Status' | Translate: this}}",
                                 width: 180,
      
                             },
                             {
                                 field: "OutstandingCashMemo",
-                                title: "Outstanding Cash Memo",
+                                title: "{{'Outstanding Cash Memo' | Translate: this}}",
                                 width: 180,
 
                             },
                             {
                                 field: "OutstandingAmount",
-                                title: "Outstanding Amount",
+                                title: "{{'Outstanding Amount' | Translate: this}}",
                                 width: 180,
                             },
                             {
                                 field: "PopStatus",
-                                title: "Pop Status",
+                                title: "{{'Pop Status' | Translate: this}}",
                                 width: 180,
                             },
                              {
                                  field: "Status",
-                                 title: "Status",
+                                 title: "{{'Status' | Translate: this}}",
                                  width: 180,
                              },
                             {

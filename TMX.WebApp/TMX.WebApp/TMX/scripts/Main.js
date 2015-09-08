@@ -25,7 +25,7 @@ function setDictionary(scope,result) {
 
 function setLang(scope,result) {
     scope["LangList"] = result;
-    scope["CurrentLang"] = result[0];
+    scope["CurrentLang"] = result[1];
     scope.updateLangDictionary();
 }
 

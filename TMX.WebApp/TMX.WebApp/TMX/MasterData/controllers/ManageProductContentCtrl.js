@@ -62,7 +62,7 @@ angular
                                 field: "ProductName",
                                 encoded: false,
                                 width:200,
-                                title: "ProductName"
+                                title: "ProductName" 
 
                             },
                             {
