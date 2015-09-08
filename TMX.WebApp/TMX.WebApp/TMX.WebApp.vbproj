@@ -145,6 +145,7 @@
     <Content Include="TMX\MasterData\controllers\ManageSupplierContentCtrl.js" />
     <Content Include="TMX\MasterData\controllers\MasterDataCtrl.js" />
     <Content Include="TMX\MasterData\controllers\ModalInstanceCtrl.js" />
+    <Content Include="TMX\MasterData\controllers\ModalInstancePricelistCtrl.js" />
     <Content Include="TMX\MasterData\controllers\RightCtrl.js" />
     <Content Include="TMX\MasterData\controllers\TopContentCtrl.js" />
     <Content Include="TMX\MasterData\controllers\TopCtrl.js" />

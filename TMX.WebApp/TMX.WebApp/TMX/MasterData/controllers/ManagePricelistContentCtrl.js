@@ -92,7 +92,7 @@ angular
             var modalInstance = $modal.open({
                 animation: $scope.animationsEnabled,
                 templateUrl: 'MasterData/partials/modalWindow/modalPricelistAdd.html',
-                controller: 'ModalInstanceCtrl',
+                controller: 'ModalInstancePricelistCtrl',
                 size: size,
                 resolve: {
                     items: function () {
